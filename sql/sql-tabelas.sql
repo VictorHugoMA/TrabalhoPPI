@@ -60,4 +60,6 @@ CREATE TABLE enderecoAjax_Trab
 
 
 INSERT INTO pessoa_Trab(nome, email, cep, logradouro, cidade, estado) VALUES ('admin', 'adm@adm.com','38400-100', 'Av Floriano Peixoto', 'Uberlândia', 'MG');
+INSERT INTO pessoa_Trab(nome, email, cep, logradouro, cidade, estado) VALUES ('Victor', 'teste@teste.com','38408-100', 'Av João Naves', 'Uberlândia', 'MG');
 INSERT INTO funcionario_Trab(codigo, senhaHash) VALUES (1, '$2y$10$4uV5xfcs180U96o5E8yZXeDn91vtNdoJY7/jJ/kqXcfkMo6s3F8ui');
+INSERT INTO paciente_Trab(codigo, peso, altura, tipoSanguineo) VALUES (2, 70, 184, 'A');
