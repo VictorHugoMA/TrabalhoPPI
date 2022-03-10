@@ -61,7 +61,7 @@ exitWhenNotLogged($pdo);
           </ul>
       </nav>
         <main>
-            <h3>Cadastrar novo endereço</h3>
+            <h3>Cadastrar novo Funcionário</h3>
             <form action="../Back-End/cadastraEndereco.php" method="post">
                     
                     <div class="row">
