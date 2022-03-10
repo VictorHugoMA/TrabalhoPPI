@@ -39,7 +39,7 @@
               <li class="nav-item"><a class="nav-link active" href="#">Listar Pacientes</a></li>
               <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosEndereco.php">Listar Endereços</a></li>
               <li class="nav-item"><a class="nav-link active" href="#">Listar Agendamentos</a></li>
-              <li class="nav-item"><a class="nav-link active" href="../../Back-End/logout.php">Loggout</a></li>
+              <li class="nav-item"><a class="nav-link active" href="../../Back-End/logout.php">Logout</a></li>
           </ul>
       </nav>
     <main>
