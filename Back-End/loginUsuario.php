@@ -32,7 +32,7 @@ try {
         $request = new RequestResponse(false, null);
     }
     else if(password_verify($senha, $row['senhaHash'])){
-        $request = new RequestResponse(true, 'AcessoRestrito/homeUsuario.html');
+        $request = new RequestResponse(true, 'AcessoRestrito/homeUsuario.php');
     }
     else{
         $request = new RequestResponse(false, null);

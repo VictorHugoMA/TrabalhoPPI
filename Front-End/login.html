@@ -85,7 +85,9 @@
             xhr.onload = function () {
                 const resposta = xhr.response;
                 if (resposta.success){
-                    window.location.href = resposta.destination;
+                  //window.location.href = resposta.destination;
+                  window.open(resposta.destination, "_blank");
+
                 }
                 else {
                     const errorMsgDiv = document.getElementById("errorMsg")
