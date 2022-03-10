@@ -47,29 +47,40 @@
             text-decoration: underline;
         }
         main{
-            width: 60%;
-            margin: 0 auto;
             padding: 20px;
-            border: 0.7px solid black;
-            border-top: none;
-            background-color: rgb(216, 216, 216);
         }
-        main > h1{
-            color: rgb(107, 107, 107);
+        .galeria{
+            gap: 2vw;
+            padding: 0 2vw;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
         }
-        main > img{
-            width:220px;
-            height:150px;
-
-            border-radius: 30px;
-            padding: 20px;
+        .galeria  a, iframe{
+            width: 347px;
+            height: 252px;
+            flex-grow: 1;
+            box-shadow: 0px 0px 5px black;
+        }
+        .galeria img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .galeria a:hover{
+            transform: scale(1.1);
+        }
+        footer{
+            margin-top: 10px;
+            padding: 5px;
+            background-color: #AAB1BF;
         }
         
     </style>
 </head>
 <body>
     <header>
-        <h1>Clinica Disney</h1>
+        <h1>Clinica Sanctum</h1>
     </header>
     <nav>
         <ul>
@@ -81,17 +92,43 @@
         </ul>
     </nav>
     <main>
-        <h1>Clinica Disney</h1>
-        <img src="../images/Clinica1.jpg" alt="Clinica 1">
-        <img src="../images/Clinica2.jpg" alt="Clinica 2">
-        <img src="../images/Clinica3.jpg" alt="Clinica 3">
-        <img src="../images/Clinica4.jpg" alt="Clinica 4">
-        <img src="../images/Clinica5.jpg" alt="Clinica 5">
-        <img src="../images/Clinica6.jpg" alt="Clinica 6">
-        <img src="../images/Clinica7.jpg" alt="Clinica 7">
-        <img src="../images/Clinica8.jpg" alt="Clinica 8">
+        <div class="galeria">
+            <a href="../images/sanctum.png">
+                <img src="../images/sanctum.png" alt="clinica" title="clinica">
+            </a>
+            <a href="../images/Clinica2.jpg">
+                <img src="../images/Clinica2.jpg" alt="clinica" title="clinica">
+            </a>
+            <a href="../images/Clinica3.jpg">
+                <img src="../images/Clinica3.jpg" alt="clinica" title="clinica">
+            </a>
+            <a href="../images/Clinica4.jpg">
+                <img src="../images/Clinica4.jpg" alt="clinica" title="clinica">
+            </a>
+            <a href="../images/Clinica5.jpg">
+                <img src="../images/Clinica5.jpg" alt="clinica" title="clinica">
+            </a>
+            <a href="../images/Clinica6.jpg">
+                <img src="../images/Clinica6.jpg" alt="clinica" title="clinica">
+            </a>
+            <a href="../images/Clinica7.jpg">
+                <img src="../images/Clinica7.jpg" alt="clinica" title="clinica">
+            </a>
+            <a href="../images/Clinica8.jpg">
+                <img src="../images/Clinica8.jpg" alt="clinica" title="clinica">
+            </a>
+            <a href="../images/Clinica1.jpg">
+                <img src="../images/Clinica1.jpg" alt="clinica" title="clinica">
+            </a>
+            <a href="../images/Clinica8.jpg">
+                <img src="../images/Clinica8.jpg" alt="clinica" title="clinica">
+            </a>
+        </div>
 
     </main>
+    <footer>
+        <p>Teste</p>
+    </footer>
     
 
 
