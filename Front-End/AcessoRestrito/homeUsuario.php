@@ -45,8 +45,8 @@ exitWhenNotLogged($pdo);
               <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
               <li class="nav-item"><a class="nav-link active" href="#">Cadastro de Funcionario</a></li>
               <li class="nav-item"><a class="nav-link active" href="#">Cadastro de Paciente</a></li>
-              <li class="nav-item"><a class="nav-link active" href="#">Listar Funcionarios</a></li>
-              <li class="nav-item"><a class="nav-link active" href="#">Listar Pacientes</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosFuncionario.php">Listar Funcionarios</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosPaciente.php">Listar Pacientes</a></li>
               <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosEndereco.php">Listar Endereços</a></li>
               <li class="nav-item"><a class="nav-link active" href="#">Listar Agendamentos</a></li>
               <li class="nav-item"><a class="nav-link active" href="../../Back-End/logout.php">Logout</a></li>
