@@ -78,7 +78,7 @@
       </nav>
       <main>
 
-          <h3>Funcionarios Cadastrados</h3>
+          <h3>Pacientes Cadastrados</h3>
           <table class="table table-striped table-hover">
               <tr>
                   <th>Nome</th>
