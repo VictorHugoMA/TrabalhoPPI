@@ -5,7 +5,7 @@ require_once "../../sql/autenticacao.php";
 
 session_start();
 $pdo = mysqlConnect();
-//exitWhenNotLogged($pdo);
+exitWhenNotLogged($pdo);
 
 ?>
 <!DOCTYPE html>
@@ -56,7 +56,6 @@ $pdo = mysqlConnect();
         <h2>Login efetudado</h2>
         <p>Bem vindo ao site, esta é sua area de usuario sit amet consectetur adipisicing elit. Quos qui debitis ab reiciendis eos, a quisquam natus quam recusandae rem voluptatem, ad fugiat. Alias voluptatibus cum fuga labore, odio autem.</p>   
         <p>Com essas opções ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto voluptates, expedita rerum voluptate nam harum veniam debitis odio ex quo recusandae ullam doloremque reiciendis. Cupiditate rerum sint nemo enim</p>
-        <a href="../index.html">Voltar para Menu</a>
     </main>
 </body>
 </html>

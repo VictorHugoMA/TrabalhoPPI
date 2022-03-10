@@ -33,11 +33,11 @@ try {
     if (!$row){
         $request = new RequestResponse(false, null);
     }
-    else if(password_verify($senha, $row['senhaHash'])){
-        $request = new RequestResponse(true, 'AcessoRestrito/homeUsuario.php');
+    else if ($senhaHash = checkPassword($pdo, $email, $senha)) {
         $_SESSION['emailUsuario'] = $email;
         $_SESSION['loginString'] = hash('sha512', $senhaHash . $_SERVER['HTTP_USER_AGENT']);
-    }
+        $request = new RequestResponse(true, 'AcessoRestrito/homeUsuario.php');
+    } 
     else{
         $request = new RequestResponse(false, null);
     }

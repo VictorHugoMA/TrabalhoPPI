@@ -9,7 +9,7 @@ session_unset();
 // destrói a sessão
 session_destroy();
 
-header('Location: ../Front-End/index.html');
+header('Location: index.html');
 exit();
 
 ?>

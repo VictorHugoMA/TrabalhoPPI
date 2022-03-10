@@ -1,7 +1,11 @@
 <?php
 
-    require "../../../sql/conexaoMysql.php";
+    require_once "../../../sql/conexaoMysql.php";
+    require_once "../../../sql/autenticacao.php";
+
+    session_start();
     $pdo = mysqlConnect();
+    exitWhenNotLogged($pdo);
 
     try {
         $sql = <<<SQL
