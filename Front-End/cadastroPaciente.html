@@ -14,21 +14,24 @@
 
     <style>
         body {
+            padding: 1rem;
+            background-color: #283039;
+        }
+        main{
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
             background-color: #EFF3F6;
+            width: 50%;
+            padding: 2%;
+            border: 0.7px solid gray;
+            border-radius: 10px;
         }
-
-        h1 {
-            text-align: center;
-            padding: 1%;
-        }
-
-        label {
-            margin-left: 5px;
-            margin-top: 15px;
-        }
-
-        .container {
-            width: 35%;
+        form button {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
     </style>
 </head>
@@ -49,11 +52,11 @@
 
 <body>
     <div class="container">
-        <header>
-            <h1>Cadastrar paciente</h1>
-        </header>
-
         <main>
+            <h3>
+                <h1>Cadastrar paciente</h1>
+            </h3>
+
             <form action="../Back-End/cadastraPaciente.php" method="post">
                 <div class="row">
                     <div class="col-sm-6">
