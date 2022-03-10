@@ -19,9 +19,10 @@ $senha = $_POST['senha'] ?? '';
 
 try {
     $sql = <<<SQL
-    SELECT hash_senha
-    FROM usuario WHERE email = ?
-    SQL;
+        SELECT senhaHash
+        FROM pessoa_Trab INNER JOIN funcionario_Trab ON pessoa_Trab.codigo = funcionario_Trab.codigo
+        WHERE email = ?
+        SQL;
 
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$email]);
@@ -30,8 +31,8 @@ try {
     if (!$row){
         $request = new RequestResponse(false, null);
     }
-    else if(password_verify($senha, $row['hash_senha'])){
-        $request = new RequestResponse(true, 'homeUsuario.html');
+    else if(password_verify($senha, $row['senhaHash'])){
+        $request = new RequestResponse(true, 'AcessoRestrito/homeUsuario.html');
     }
     else{
         $request = new RequestResponse(false, null);
