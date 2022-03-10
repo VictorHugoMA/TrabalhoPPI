@@ -24,6 +24,7 @@ nav{
     position:sticky;
     top: 0;
     background-color: #AAB1BF;
+    z-index: 1;
 }
 nav > ul{
     padding: 0;
@@ -59,4 +60,34 @@ footer {
     
     background-color: #AAB1BF;
 
+}
+.galeria {
+    gap: 2vw;
+    padding: 0 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.galeria a,
+iframe {
+    width: 347px;
+    height: 252px;
+    flex-grow: 1;
+    box-shadow: 0px 0px 5px black;
+}
+
+.galeria img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.galeria a:hover {
+    transform: scale(1.1);
+}
+
+form button {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
