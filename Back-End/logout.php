@@ -9,7 +9,7 @@ session_unset();
 // destrói a sessão
 session_destroy();
 
-header('Location: index.html');
+header('Location: http://victoralves.atwebpages.com/clinica');
 exit();
 
 ?>

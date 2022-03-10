@@ -71,7 +71,7 @@ function checkLogged($pdo)
 function exitWhenNotLogged($pdo)
 {
   if (!checkLogged($pdo)) {
-    header("Location: ../Front-End/index.html");
+    header("Location: http://victoralves.atwebpages.com/clinica");
     exit();
   }
 }

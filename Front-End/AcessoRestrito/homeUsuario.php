@@ -43,6 +43,7 @@ exitWhenNotLogged($pdo);
      <nav>
           <ul class="nav justify-content-center">
               <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="homeUsuario.php">Home Usuario</a></li>
               <li class="nav-item"><a class="nav-link active" href="#">Cadastro de Funcionario</a></li>
               <li class="nav-item"><a class="nav-link active" href="#">Cadastro de Paciente</a></li>
               <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosFuncionario.php">Listar Funcionarios</a></li>
