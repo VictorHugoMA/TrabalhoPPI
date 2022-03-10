@@ -1,17 +1,17 @@
 CREATE TABLE Agenda
 (
-   id int PRIMARY KEY auto_increment,
-   cep char(10),
-   endereco varchar(100),
-   bairro varchar(50),
-   cidade varchar(50),
-   id_cliente int not null,
+   codigo int PRIMARY KEY auto_increment,
+   data date,
+   horario date,
+   nome varchar(50),
+   sexo varchar(50),
+   email varchar(50) UNIQUE,
    FOREIGN KEY (id_cliente) REFERENCES cliente(id) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
 CREATE TABLE Pessoa
 (
-   id int PRIMARY KEY auto_increment,
+   codigo int PRIMARY KEY auto_increment,
    cep char(10),
    endereco varchar(100),
    bairro varchar(50),
