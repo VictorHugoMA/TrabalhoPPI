@@ -33,7 +33,7 @@ exitWhenNotLogged($pdo);
             padding: 2%;
             border: 0.7px solid gray;
             border-radius: 10px;
-            margin-top: 1%;
+            margin-top: 5%;
         }
         form button {
             margin-top: 1rem;
