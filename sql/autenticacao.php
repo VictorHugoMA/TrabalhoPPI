@@ -3,10 +3,10 @@
 function checkPassword($pdo, $email, $senha)
 {
   $sql = <<<SQL
-    SELECT hash_senha
-    FROM cliente
-    WHERE email = ?
-    SQL;
+        SELECT senhaHash
+        FROM pessoa_Trab INNER JOIN funcionario_Trab ON pessoa_Trab.codigo = funcionario_Trab.codigo
+        WHERE email = ?
+        SQL;
 
   try {
     // Neste caso utilize prepared statements para prevenir
@@ -42,10 +42,10 @@ function checkLogged($pdo)
 
   // Resgata a senha hash armazenada para conferência
   $sql = <<<SQL
-    SELECT hash_senha
-    FROM cliente
-    WHERE email = ?
-    SQL;
+        SELECT senhaHash
+        FROM pessoa_Trab INNER JOIN funcionario_Trab ON pessoa_Trab.codigo = funcionario_Trab.codigo
+        WHERE email = ?
+        SQL;
 
   try {
     $stmt = $pdo->prepare($sql);
@@ -71,7 +71,7 @@ function checkLogged($pdo)
 function exitWhenNotLogged($pdo)
 {
   if (!checkLogged($pdo)) {
-    header("Location: index.html");
+    header("Location: ../Front-End/index.html");
     exit();
   }
 }

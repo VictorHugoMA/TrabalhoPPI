@@ -1,5 +1,7 @@
 <?php
-require "../sql/conexaoMysql.php";
+require_once "../sql/conexaoMysql.php";
+require_once "../sql/autenticacao.php";
+session_start();
 
 class RequestResponse{
     public $success;
@@ -33,6 +35,8 @@ try {
     }
     else if(password_verify($senha, $row['senhaHash'])){
         $request = new RequestResponse(true, 'AcessoRestrito/homeUsuario.php');
+        $_SESSION['emailUsuario'] = $email;
+        $_SESSION['loginString'] = hash('sha512', $senhaHash . $_SERVER['HTTP_USER_AGENT']);
     }
     else{
         $request = new RequestResponse(false, null);
