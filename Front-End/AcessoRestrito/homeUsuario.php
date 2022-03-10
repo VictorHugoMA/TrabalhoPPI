@@ -14,7 +14,7 @@ exitWhenNotLogged($pdo);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home Usuário</title>
     <link rel="stylesheet" href="../../style/style.css">
     <style>
         body{
@@ -43,10 +43,10 @@ exitWhenNotLogged($pdo);
      <nav>
           <ul class="nav justify-content-center">
               <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link active" href="homeUsuario.php">Home Usuario</a></li>
-              <li class="nav-item"><a class="nav-link active" href="#">Cadastro de Funcionario</a></li>
+              <li class="nav-item"><a class="nav-link active" href="homeUsuario.php">Home Usuário</a></li>
+              <li class="nav-item"><a class="nav-link active" href="#">Cadastro de Funcionário</a></li>
               <li class="nav-item"><a class="nav-link active" href="#">Cadastro de Paciente</a></li>
-              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosFuncionario.php">Listar Funcionarios</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosFuncionario.php">Listar Funcionários</a></li>
               <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosPaciente.php">Listar Pacientes</a></li>
               <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosEndereco.php">Listar Endereços</a></li>
               <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosConsulta.php">Listar Agendamentos</a></li>
