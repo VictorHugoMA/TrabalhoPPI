@@ -1,7 +1,7 @@
 CREATE TABLE agenda_Trab
 (
    codigo int PRIMARY KEY auto_increment,
-   data date,
+   dataAgenda date,
    horario date,
    nome varchar(50),
    sexo varchar(50),
@@ -46,7 +46,7 @@ CREATE TABLE medico_Trab
    codigo int PRIMARY KEY,
    especialidade char(50),
    crm varchar(50),
-   FOREIGN KEY (codigo) REFERENCES pessoa_Trab(codigo) ON DELETE CASCADE
+   FOREIGN KEY (codigo) REFERENCES funcionario_Trab(codigo) ON DELETE CASCADE
 ) ENGINE=InnoDB;
 
 CREATE TABLE enderecoAjax_Trab
