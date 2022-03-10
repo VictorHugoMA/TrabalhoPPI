@@ -51,20 +51,24 @@ exitWhenNotLogged($pdo);
 
 </header>
 <nav>
-    <ul class="nav justify-content-center">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="galeria.html">Galeria</a></li>
-        <li class="nav-item"><a class="nav-link active" href="cadastroEndereco.html">Novo endereço</a></li>
-        <li class="nav-item"><a class="nav-link active" href="agendarConsulta.html">Agendamento de Consulta</a></li>
-        <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
-    </ul>
+            <ul class="nav justify-content-center">
+              <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="homeUsuario.php">Home Usuário</a></li>
+              <li class="nav-item"><a class="nav-link active" href="formCadastroFuncionario.php">Cadastro de Funcionário</a></li>
+              <li class="nav-item"><a class="nav-link active" href="formCadastroPaciente.php">Cadastro de Paciente</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosFuncionario.php">Listar Funcionários</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosPaciente.php">Listar Pacientes</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosEndereco.php">Listar Endereços</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosConsulta.php">Listar Agendamentos</a></li>
+              <li class="nav-item"><a class="nav-link active" href="../../Back-End/logout.php">Logout</a></li>
+          </ul>
 </nav>
 
 <body>
     <div class="container">
         <main>
             <h3>
-                <h1>Cadastrar paciente</h1>
+                <h1>Cadastrar novo Paciente</h1>
             </h3>
 
             <form action="../Back-End/cadastraPaciente.php" method="post">
