@@ -38,3 +38,20 @@ li > a{
 li > a:hover{
     text-decoration: underline;
 }
+main {
+    background-color: #eee;
+    padding: 1% 2%;
+    border-top: none;
+    width: 96%;
+    margin: 0 auto;
+    padding-bottom: 8cm;
+
+}
+footer {
+    text-align: center;
+    padding: 5px;
+    margin: 0 auto;
+    
+    background-color: #AAB1BF;
+
+}
