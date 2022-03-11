@@ -120,7 +120,7 @@ exitWhenNotLogged($pdo);
                                 </select>
                             </div>
                             <div class="col-sm-4">
-                                <label class="form-label" for="dataContrato">dataContrato</label>
+                                <label class="form-label" for="dataContrato">Data Contrato</label>
                                 <input class="form-control" type="date" id="dataContrato" name="dataContrato">
                             </div>
                             <div class="col-sm-4">
