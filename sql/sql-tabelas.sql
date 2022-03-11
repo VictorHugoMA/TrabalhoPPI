@@ -71,3 +71,8 @@ INSERT INTO medico_Trab(codigo, especialidade, crm) VALUES (3, 'cardiologia', '1
 INSERT INTO paciente_Trab(codigo, peso, altura, tipoSanguineo) VALUES (2, 70, 184, 'A');
 
 INSERT INTO agenda_Trab(dataAgenda, nome, email, codigo_medico) VALUES ('2022-03-10', 'Carlos', 'carlos@mail.com', 3);
+
+
+SELECT especialidade
+   FROM medico_Trab
+      GROUP BY especialidade;

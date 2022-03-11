@@ -135,31 +135,32 @@
     </footer>
 
     <script>
-        function verificaForm(e) {
-            const especialidade = e.value;
+        window.onload = verificaEspecialidades();
 
-            let select = document.getElementById("medico");
-            let xhr = new XMLHttpRequest();
-            xhr.open("GET", "buscaMedico.php?especialidade=" + especialidade, true);
-            xhr.responseType = 'json';
+        async function verificaEspecialidades(){
+            let select = document.getElementById("especialidade");
 
-            xhr.onload = function () {
-                const resposta = xhr.response;
-                select.removeAttribute('disabled')
-                select.innerHTML = '';
-                for (i in resposta) {
-                    let option = document.createElement("option");
-                    option.text = resposta[i].nome + ' - ' + resposta[i].telefone;
-                    option.value = resposta[i].nome + ' - ' + resposta[i].telefone;
-                    select.add(option);
+            
+            try{
+                const response = await fetch("../Back-End/buscaEspecialidade.php");
+                
+                if (!response.ok) {
+                    throw new Error(response.status);
                 }
+
+                var resposta = await response.json();
             }
-
-            xhr.onerror = function () {
-                console.error("Erro de rede - requisição não finalizada");
-            };
-
-            xhr.send();
+            catch (e) {
+                console.error(e);
+                return;
+            }
+            
+            for (i in resposta) {
+                let option = document.createElement("option");
+                option.text = resposta[i];
+                option.value = resposta[i];
+                select.add(option);
+            }
 
         }
     </script>
