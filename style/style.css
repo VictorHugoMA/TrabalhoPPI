@@ -3,6 +3,8 @@ body{
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #EFF3F6;
+    padding-top: 110px;
+
 }
 header{
     padding: 20px;
@@ -18,30 +20,28 @@ header > img{
     padding-left: 20px;
 }
 nav{
-    text-align: center;
     padding: 0;
     margin: auto;
-    position:sticky;
-    top: 0;
     background-color: #3f3f3f;
     z-index: 1;
-
     font-family: Georgia, 'Times New Roman', Times, serif;
-
+    color: white;
 }
+
 nav > ul{
     padding: 0;
     margin: 0;
     overflow: hidden;
     list-style: none;
+    color: white;
+
 }
 nav li{
     display: inline;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding-left: 7%;
-    padding-top: 2%;
+    margin-left: 55px;
+    margin-right: 55px;
     font-weight: bold;
+    color: white;
 
 }
 nav li >a:hover{
@@ -68,9 +68,9 @@ main {
 }
 footer {
     text-align: center;
-    padding: 5px;
+    padding: 15px;
     margin: 0 auto;
-    
+
     background-color: #AAB1BF;
 
 }
@@ -132,4 +132,8 @@ form button {
     max-width: 400px;
     height: auto;
   }
-  
+  nav button
+  .button-color {
+      background-color: white;
+
+  }
