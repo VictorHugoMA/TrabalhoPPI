@@ -86,6 +86,9 @@
       xhr.onload = function () {
         const resposta = xhr.response;
         if (resposta.success) {
+            let form = document.querySelector("form");
+            form.email.value = '';
+            form.senha.value = '';
             window.open(resposta.destination, "_blank");
         }
         else {
