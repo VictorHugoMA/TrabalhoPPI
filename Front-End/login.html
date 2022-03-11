@@ -9,50 +9,28 @@
     integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
 
   <link rel="stylesheet" href="../style/style.css">
-  <style>
-    body {
-      padding: 1rem;
-      background-color: #283039;
-    }
 
-    main {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-
-      background-color: #EFF3F6;
-      width: 50%;
-      padding: 2%;
-      border: 0.7px solid gray;
-      border-radius: 10px;
-    }
-
-    form button {
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-    }
-  </style>
 </head>
 
-<body>
-  <nav class="row">
+<body class="body-forms">
+  <nav class="row" >
     <a class="nav-link active col-1" href="index.html">
-      <img src="../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" height="80">
+        <img src="../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" height="80">
     </a>
 
     <ul class="nav justify-content-center col-11">
-      <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link active" href="galeria.html">Galeria</a></li>
-      <li class="nav-item"><a class="nav-link active" href="cadastroEndereco.html">Novo endereço</a></li>
-      <li class="nav-item"><a class="nav-link active" href="agendarConsulta.html">Agendamento de Consulta</a></li>
-      <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link active" href="galeria.html">Galeria</a></li>
+        <li class="nav-item"><a class="nav-link active" href="cadastroEndereco.html">Novo endereço</a></li>
+        <li class="nav-item"><a class="nav-link active" href="agendarConsulta.html">Agendamento de Consulta</a></li>
+        <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
     </ul>
-  </nav>
-  <div class="container">
-    <main>
+</nav>
+
+<div class="container">
+    <main class="main-forms">
       <h3>Login</h3>
-      <form onsubmit="" class="row g-3">
+      <form onsubmit="" class="row g-3 ">
         <div class="col-sm-12">
           <label for="email" class="form-label">Email</label>
           <input type="email" name="email" class="form-control" id="email">
