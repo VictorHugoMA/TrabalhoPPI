@@ -168,6 +168,7 @@ exitWhenNotLogged($pdo);
                 </form>
         </main>
     </div>
+    <script src="../../js/ajaxEndereco.js"></script>
     <script>
         function verificaMedico() {
             let radio = document.querySelector("input[type='radio']:checked").value;
