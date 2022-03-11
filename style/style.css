@@ -6,19 +6,6 @@ body{
     padding-top: 110px;
 
 }
-header{
-    padding: 20px;
-    background-color: rgb(248, 177, 105);
-}
-header > h1{
-    padding: 10px;
-    margin: 0;
-    text-align: center;
-    color: azure;
-}
-header > img{
-    padding-left: 20px;
-}
 nav{
     padding: 0;
     margin: auto;
