@@ -20,12 +20,8 @@ try {
 
 
     while ($row = $stmt->fetch()) {
-
         array_push($horarios, $row['horario']);
     }
-
-
-
 
     foreach (array(8, 9, 10, 11, 12, 13, 14, 15, 16, 17) as $horario) {
         if (!in_array($horario, $horarios))
@@ -33,7 +29,9 @@ try {
     }
 
     echo json_encode($disponiveis);
-} catch (Exception $e) {
+}
 
+catch (Exception $e) {
     exit('Falha inesperada: ' . $e->getMessage());
 }
+?>
