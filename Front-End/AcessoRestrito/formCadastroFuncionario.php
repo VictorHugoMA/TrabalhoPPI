@@ -15,51 +15,38 @@ exitWhenNotLogged($pdo);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar novo Funcionário</title>
-    <link rel="stylesheet" href="../../style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <style>
-        body {
-            padding: 1rem;
-            background-color: #283039;
-        }
-        main{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            background-color: #EFF3F6;
-            width: 50%;
-            padding: 2%;
-            border: 0.7px solid gray;
-            border-radius: 10px;
-            margin-top: 5%;
-        }
-        form button {
-            margin-top: 1rem;
-            margin-bottom: 1rem;
-        }
-    </style>
+    <link rel="stylesheet" href="../../style/style_restrita.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 </head>
 <body>
     <div class="container">
-    <header>
-        <img src="../../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" width="220" height="120" >
-        
-     </header>
-     <nav>
-          <ul class="nav justify-content-center">
-              <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
-              <li class="nav-item"><a class="nav-link active" href="homeUsuario.php">Home Usuário</a></li>
-              <li class="nav-item"><a class="nav-link active" href="formCadastroFuncionario.php">Cadastro de Funcionário</a></li>
-              <li class="nav-item"><a class="nav-link active" href="formCadastroPaciente.php">Cadastro de Paciente</a></li>
-              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosFuncionario.php">Listar Funcionários</a></li>
-              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosPaciente.php">Listar Pacientes</a></li>
-              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosEndereco.php">Listar Endereços</a></li>
-              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosConsulta.php">Listar Agendamentos</a></li>
-              <li class="nav-item"><a class="nav-link active" href="../../Back-End/logout.php">Logout</a></li>
-          </ul>
-      </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top  ">
+        <a class="nav-link active col-1" href="../index.html">
+            <img src="../../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" height="80">
+        </a>
+        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active"><a class="nav-link" href="homeUsuario.php">Home Usuário</a></li>
+                <li class="nav-item"><a class="nav-link" href="formCadastroFuncionario.php">Cadastro de Funcionário</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="formCadastroPaciente.php">Cadastro de Paciente</a></li>
+                <li class="nav-item"><a class="nav-link" href="dados/mostraDadosFuncionario.php">Listar Funcionários</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="dados/mostraDadosPaciente.php">Listar Pacientes</a></li>
+                <li class="nav-item"><a class="nav-link" href="dados/mostraDadosEndereco.php">Listar Endereços</a></li>
+                <li class="nav-item"><a class="nav-link" href="dados/mostraDadosConsulta.php">Listar Agendamentos</a>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="../../Back-End/logout.php">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
         <main>
             <h3>Cadastrar novo Funcionário</h3>
             <form action="../../Back-End/cadastraFuncionario.php" method="post">
