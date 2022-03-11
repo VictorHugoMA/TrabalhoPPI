@@ -1,10 +1,9 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: #EFF3F6;
+    background-color: #eee !important;
     padding-top: 110px;
-
+    
 }
 nav{
     padding: 0;
@@ -12,7 +11,6 @@ nav{
     background-color: #3f3f3f;
     z-index: 1;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: white;
 }
 
 nav > ul{
@@ -20,7 +18,6 @@ nav > ul{
     margin: 0;
     overflow: hidden;
     list-style: none;
-    color: white;
 
 }
 nav li{
@@ -28,7 +25,6 @@ nav li{
     margin-left: 55px;
     margin-right: 55px;
     font-weight: bold;
-    color: white;
 
 }
 nav li >a:hover{
@@ -37,29 +33,26 @@ nav li >a:hover{
     text-decoration:none;
     color: white;
 }
-li > a{
-    text-decoration: none;
-    color: white;
-}
-li > a:hover{
-    text-decoration: underline;
 
-}
 main {
     background-color: #eee;
     padding: 1% 2%;
     border-top: none;
     margin: 0 auto;
-    padding-bottom: 8cm;
-
+    padding: bottom 100px;
+    min-height: calc(100vh - 330px);
+    
 }
 footer {
     text-align: center;
-    padding: 15px;
-    margin: 0 auto;
-
+    align-items: center;
+    
+    padding-top: 8px;
     background-color: #AAB1BF;
-
+    position: static;
+    width: 100%;
+    height:26%;
+       
 }
 .galeria {
     gap: 2vw;
@@ -92,19 +85,23 @@ form button {
     margin-bottom: 1rem;
 }
 
-
-  form button {
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .responsive {
+.responsive {
     width: 100%;
     max-width: 400px;
     height: auto;
-  }
-  nav button
-  .button-color {
-      background-color: white;
+}
+.color-white {
+    color: white !important;
+}
+.login-b {
 
-  }
+    background-color: rgb(3, 153, 3);
+    color: white !important;
+    border-radius: 10px;
+}
+
+.login-b:hover {
+    background-color: rgb(3, 153, 3);
+    color: white !important;
+    border-radius: 10px;
+}
