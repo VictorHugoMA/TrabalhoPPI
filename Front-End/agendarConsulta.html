@@ -206,10 +206,10 @@
             const data = e.value;
             let selectHorario = document.getElementById("horario");
             let select = document.getElementById("medico");
-            const codigo = select.value;
+            let codigo = select.value;
 
             try {
-                const response = await fetch("../Back-End/buscaHorario.php?data=" + data + "&codigo=" + medico);
+                const response = await fetch("../Back-End/buscaHorario.php?data=" + data + "&codigo=" + codigo);
 
                 if (!response.ok) {
                     throw new Error(response.status);
@@ -218,14 +218,14 @@
                 var resposta = await response.json();
             }
             catch (e) {
-                console.error(e);
+                //console.error(e);
                 return;
             }
             selectHorario.innerHTML = '';
-            for (i in response) {
+            for (i in resposta) {
                 var option = document.createElement("option");
-                option.text = response[i];
-                option.value = response[i]
+                option.text = resposta[i];
+                option.value = resposta[i]
                 selectHorario.add(option);
             }
 

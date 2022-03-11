@@ -3,7 +3,7 @@
 require "../sql/conexaoMysql.php";
 $pdo = mysqlConnect();
 
-$dataAgenda = isset($_POST["dataAgenda"]) ? $_POST["dataAgenda"]: "";
+$dataAgenda = isset($_POST["data"]) ? $_POST["data"]: "";
 $horario = isset($_POST["horario"]) ? $_POST["horario"] : "";
 $nome = isset($_POST["nome"]) ? $_POST["nome"] : "";
 $sexo = isset($_POST["sexo"]) ? $_POST["sexo"] : "";

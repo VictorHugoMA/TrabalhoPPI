@@ -1,6 +1,7 @@
 <?php
 require "../sql/conexaoMysql.php";
 
+$pdo = mysqlConnect();
 
 $dataAgenda = $_GET['data'] ?? '';
 $codigo = $_GET['codigo'] ?? '';
@@ -12,6 +13,8 @@ $sql = <<<SQL
     SQL;
 
 try {
+    $horarios = [];
+    $disponiveis = [];
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$dataAgenda, $codigo]);
 
@@ -29,7 +32,7 @@ try {
             array_push($disponiveis, $horario);
     }
 
-    return json_encode($disponiveis);
+    echo json_encode($disponiveis);
 } catch (Exception $e) {
 
     exit('Falha inesperada: ' . $e->getMessage());
