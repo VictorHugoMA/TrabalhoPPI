@@ -192,9 +192,8 @@
                 console.error(e);
                 return;
             }
-
+            select.innerHTML = '';
             for (i in resposta) {
-
                 let option = document.createElement("option");
                 option.text = resposta[i].nome;
                 option.value = resposta[i].cod_medico;

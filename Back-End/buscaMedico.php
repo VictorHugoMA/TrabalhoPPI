@@ -34,7 +34,7 @@ catch (Exception $e) {
 }
 
 while($row = $stmt->fetch()){
-    $medicos[] = new Medico($row['nome'], $row['codigo'], $row['especialidade']);
+    $medicos[] = new Medico($row['nome'], $row['cod'], $row['especialidade']);
 }
 
 
