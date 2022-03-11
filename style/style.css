@@ -1,7 +1,6 @@
 body{
     margin: 0;
     box-sizing: border-box;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: #eee !important;
     padding-top: 110px;
     
@@ -42,11 +41,11 @@ main {
     margin: 0 auto;
     padding: bottom 100px;
     min-height: calc(100vh - 330px);
+    
 }
 footer {
     text-align: center;
     align-items: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     
     padding-top: 8px;
     background-color: #AAB1BF;
@@ -91,7 +90,9 @@ form button {
     max-width: 400px;
     height: auto;
 }
-
+.color-white {
+    color: white !important;
+}
 .login-b {
 
     background-color: rgb(3, 153, 3);
