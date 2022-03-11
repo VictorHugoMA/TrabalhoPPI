@@ -52,7 +52,17 @@ footer {
     position: static;
     width: 100%;
     height:26%;
-       
+    
+}
+footer p{
+    color: white;
+    font-weight: bold;
+
+}
+footer address p{
+    color: rgb(0, 0, 0);
+    font-weight:normal;
+
 }
 .galeria {
     gap: 2vw;
