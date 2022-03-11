@@ -1,3 +1,13 @@
+<?php
+
+require_once "../../sql/conexaoMysql.php";
+require_once "../../sql/autenticacao.php";
+
+session_start();
+$pdo = mysqlConnect();
+exitWhenNotLogged($pdo);
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -7,7 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../../style/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
     <title>Cadastro paciente</title>
@@ -38,15 +48,19 @@
 
 <nav class="row" >
     <a class="nav-link active col-1" href="index.html">
-        <img src="../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" height="80">
+        <img src="../../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" height="80">
     </a>
 
-    <ul class="nav justify-content-center col-11">
-        <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link active" href="galeria.html">Galeria</a></li>
-        <li class="nav-item"><a class="nav-link active" href="cadastroEndereco.html">Novo endereço</a></li>
-        <li class="nav-item"><a class="nav-link active" href="agendarConsulta.html">Agendamento de Consulta</a></li>
-        <li class="nav-item"><a class="nav-link active" href="login.html">Login</a></li>
+    <ul class="nav justify-content-center">
+              <li class="nav-item"><a class="nav-link active" href="../index.html">Home</a></li>
+              <li class="nav-item"><a class="nav-link active" href="homeUsuario.php">Home Usuário</a></li>
+              <li class="nav-item"><a class="nav-link active" href="formCadastroFuncionario.php">Cadastro de Funcionário</a></li>
+              <li class="nav-item"><a class="nav-link active" href="formCadastroPaciente.php">Cadastro de Paciente</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosFuncionario.php">Listar Funcionários</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosPaciente.php">Listar Pacientes</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosEndereco.php">Listar Endereços</a></li>
+              <li class="nav-item"><a class="nav-link active" href="dados/mostraDadosConsulta.php">Listar Agendamentos</a></li>
+              <li class="nav-item"><a class="nav-link active" href="../../Back-End/logout.php">Logout</a></li>
     </ul>
 </nav>
 
@@ -54,10 +68,10 @@
     <div class="container">
         <main>
             <h3>
-                <h1>Cadastrar paciente</h1>
+                Cadastrar novo paciente
             </h3>
 
-            <form action="../Back-End/cadastraPaciente.php" method="post">
+            <form action="../../Back-End/cadastraPaciente.php" method="post">
                 <div class="row">
                     <div class="col-sm-6">
                         <label for="nome" class="form-label">Nome:</label>

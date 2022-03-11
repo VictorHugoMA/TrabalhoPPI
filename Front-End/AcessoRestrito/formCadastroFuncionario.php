@@ -62,7 +62,7 @@ exitWhenNotLogged($pdo);
       </nav>
         <main>
             <h3>Cadastrar novo Funcionário</h3>
-            <form action="../Back-End/cadastraEndereco.php" method="post">
+            <form action="../../Back-End/cadastraFuncionario.php" method="post">
                     
                     <div class="row">
                         <div class="col-sm-8">
@@ -142,7 +142,7 @@ exitWhenNotLogged($pdo);
                             </div>
                             <div class="col-sm-4">
                                 <label class="form-label" for="senha">Senha</label>
-                                <input class="form-control" type="passoword" id="senha" name="senha">
+                                <input class="form-control" type="password" id="senha" name="senha">
                             </div>
 
                             
