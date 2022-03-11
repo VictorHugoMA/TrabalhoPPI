@@ -9,9 +9,12 @@ main{
     transform: translate(-50%, -50%);
 
     background-color: #EFF3F6;
+    width: 50%;
+
     padding: 1%;
     border-radius: 5px;
 }
+
 main h2{
     text-align: center;
 }
@@ -35,8 +38,9 @@ nav > ul{
 }
 nav li{
     display: inline;
-    margin-left: 55px;
-    margin-right: 55px;
+    margin-left: 45px;
+    margin-right: 45px;
+    padding-top: 8px;
     font-weight: bold;
     color: white;
 
