@@ -54,7 +54,7 @@
     <div class="container">
         <main>
             <h3>
-                <h1>Cadastrar novo Paciente</h1>
+                <h1>Cadastrar paciente</h1>
             </h3>
 
             <form action="../Back-End/cadastraPaciente.php" method="post">
@@ -67,8 +67,9 @@
                         <label for="sexo" class="form-label">Sexo:</label>
                         <select name="sexo" id="sexo" class="form-select">
                             <option selected>Selecione</option>
-                            <option value="m">Masculino</option>
-                            <option value="f">Feminino</option>
+                            <option value="Masculino">Masculino</option>
+                            <option value="Feminino">Feminino</option>
+                            <option value="Outro">Outro</option>
                         </select>
                     </div>
                 </div>
