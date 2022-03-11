@@ -3,12 +3,12 @@
 require "../sql/conexaoMysql.php";
 $pdo = mysqlConnect();
 
-$medico = isset($_POST["medico"]) ? $_POST["medico"]: "";
 $dataAgenda = isset($_POST["dataAgenda"]) ? $_POST["dataAgenda"]: "";
 $horario = isset($_POST["horario"]) ? $_POST["horario"] : "";
 $nome = isset($_POST["nome"]) ? $_POST["nome"] : "";
 $sexo = isset($_POST["sexo"]) ? $_POST["sexo"] : "";
 $email = isset($_POST["email"]) ? $_POST["email"] : "";
+$cod_medico = isset($_POST["medico"]) ? $_POST["medico"] : "";
 
 try {
     $sql = <<<SQL
@@ -17,7 +17,7 @@ try {
     SQL;
 
     $stmt = $pdo->prepare($sql);
-    $stmt->execute([$medico, $data, $horario, $nome, $sexo, $email]);
+    $stmt->execute([$cod_medico, $dataAgenda, $horario, $nome, $sexo, $email]);
   
     header("location: ../Front-End/index.html");
     exit();
