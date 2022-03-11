@@ -75,7 +75,7 @@ exitWhenNotLogged($pdo);
                 <div class="row">
                     <div class="col-sm-6">
                         <label for="nome" class="form-label">Nome:</label>
-                        <input type="text" class="form-control" id="nome" name="name">
+                        <input type="text" class="form-control" id="nome" name="nome">
                     </div>
                     <div class="col-sm-6">
                         <label for="sexo" class="form-label">Sexo:</label>
