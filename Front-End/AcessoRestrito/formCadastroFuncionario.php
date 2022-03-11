@@ -142,19 +142,25 @@ exitWhenNotLogged($pdo);
                             </div>
                             <div class="col-sm-4">
                                 <label class="form-label" for="senha">Senha</label>
-                                <input class="form-control" type="password" id="senha" name="senha">
+                                <input class="form-control" type="password" id="senha" name="senha" require>
                             </div>
-
+                            <h5>É médico ?</h5>
+                            <div>
+                                <input class="ehMedico .form-check-input " type="radio" onclick="verificaMedico();" id="simMedico" name="medico" value="simMedico"checked>
+                                <label for="simMedico">Sim</label>
+                                <input class="ehMedico .form-check-input " type="radio" onclick="verificaMedico();" id="naoMedico" name="medico" value="naoMedico">
+                                <label for="naoMedico">Não</label>
+                            </div>
                             
                                 <div class="col-sm-6">
                                     <label class="form-label" for="especialidade">Especialidade</label>
-                                    <input class="form-control" type="text" id="especialidade" name="especialidade">
+                                    <input class="form-control medico" type="text" id="especialidade" name="especialidade">
                                 </div>
                                 <div class="col-sm-6">
                                     <label class="form-label" for="crm">CRM</label>
-                                    <input class="form-control" type="number" id="crm" name="crm">
-                                
-                            </div>
+                                    <input class="form-control medico" type="number" id="crm" name="crm">
+                                </div>
+                    </div>
                     
                     
                     <button class="btn btn-primary my-2">Cadastrar</button>
@@ -162,6 +168,24 @@ exitWhenNotLogged($pdo);
                 </form>
         </main>
     </div>
+    <script>
+        function verificaMedico() {
+            let radio = document.querySelector("input[type='radio']:checked").value;
+            let campoEspecialidade = document.getElementById("especialidade");
+            let campoCrm = document.getElementById("crm");
+
+            if(radio == "simMedico"){
+               campoEspecialidade.removeAttribute('disabled');
+               campoCrm.removeAttribute('disabled');
+            }
+            else if(radio == "naoMedico"){
+                campoEspecialidade.setAttribute('disabled', 'disabled');
+                campoCrm.setAttribute('disabled', 'disabled');
+                campoEspecialidade.value = '';
+                campoCrm.value = '';
+            }
+        }
+    </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 </body>
 </html>
