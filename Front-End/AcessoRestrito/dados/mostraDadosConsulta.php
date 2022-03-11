@@ -37,7 +37,7 @@
 
   <div class="container">
       <nav class="navbar navbar-expand-lg navbar-dark fixed-top  ">
-        <a class="nav-link active col-1" href="../index.html">
+      <a class="nav-link active col-1" href="../../index.html">
             <img src="../../../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" height="80">
         </a>
         <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
