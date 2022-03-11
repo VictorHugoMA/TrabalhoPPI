@@ -53,14 +53,23 @@
             <form action="../Back-End/agendaConsulta.php" method="post">
 
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-2">
                         <label for="especialidade">Especialidade</label>
                         <select name="especialidade" id="especialidade" class="form-select"  onchange="getMedicos(this)">
                         </select>
                     </div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-6">
                         <label for="medico">Médico</label>
                         <select name="medico" id="medico" class="form-select" ">
+                        </select>
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="data">Data</label>
+                        <input type="date" name="data" id="data" class="form-control" onchange="getHorarios(this)">
+                    </div>
+                    <div class="col-sm-2">
+                        <label for="horario">Horário</label>
+                        <select name="horario" id="horario" class="form-select">
                         </select>
                     </div>
                 </div>
