@@ -54,7 +54,7 @@
     <div class="container">
         <main>
             <h3>
-                <h1>Cadastrar paciente</h1>
+                <h1>Cadastrar novo Paciente</h1>
             </h3>
 
             <form action="../Back-End/cadastraPaciente.php" method="post">
