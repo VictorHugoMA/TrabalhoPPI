@@ -172,6 +172,35 @@
             }
 
         }
+
+
+        async function getMedicos(e){
+            const especialidade = e.value;
+            let select = document.getElementById("medico");
+
+            
+            try{
+                const response = await fetch("../Back-End/buscaMedico.php?especialidade=" + especialidade);
+                
+                if (!response.ok) {
+                    throw new Error(response.status);
+                }
+
+                var resposta = await response.json();
+            }
+            catch (e) {
+                console.error(e);
+                return;
+            }
+            
+            for (i in resposta) {
+                let option = document.createElement("option");
+                option.text = resposta[i].nome;
+                option.value = resposta[i].nome;
+                select.add(option);
+            }
+
+        }
     </script>
     <!-- Bootstrap CSS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"

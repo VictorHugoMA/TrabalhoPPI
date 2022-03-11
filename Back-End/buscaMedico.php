@@ -4,13 +4,13 @@ require "../sql/conexaoMysql.php";
 class Medico
 {
   public $nome;
-  public $telefone;
+  public $cod_medico;
   public $especialidade;
 
-  function __construct($nome, $telefone, $especialidade)
+  function __construct($nome, $cod_medico, $especialidade)
   {
     $this->nome = $nome;
-    $this->telefone = $telefone; 
+    $this->cod_medico = $cod_medico; 
     $this->especialidade = $especialidade;
   }
 }
@@ -21,8 +21,8 @@ $especialidade = $_GET['especialidade'] ?? '';
 
 try {
     $sql = <<<SQL
-    SELECT nome_medico, telefone_medico, especialidade_medico
-    FROM medico WHERE especialidade_medico = ?
+    SELECT nome, m.codigo as cod, especialidade
+    FROM medico_Trab m inner join pessoa_Trab p ON m.codigo = p.codigo WHERE especialidade = ?
     SQL;
 
     $stmt = $pdo->prepare($sql);
@@ -34,7 +34,7 @@ catch (Exception $e) {
 }
 
 while($row = $stmt->fetch()){
-    $medicos[] = new Medico($row['nome_medico'], $row['telefone_medico'], $row['especialidade_medico']);
+    $medicos[] = new Medico($row['nome'], $row['codigo'], $row['especialidade']);
 }
 
 
