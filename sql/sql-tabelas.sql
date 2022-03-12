@@ -76,3 +76,8 @@ INSERT INTO agenda_Trab(dataAgenda, nome, email, codigo_medico) VALUES ('2022-03
 SELECT especialidade
    FROM medico_Trab
       GROUP BY especialidade;
+
+SELECT * FROM medico_Trab 
+WHERE EXISTS ( 
+   SELECT 1 FROM funcionario_Trab 
+   WHERE medico_Trab.codigo = 11);
