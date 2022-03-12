@@ -167,7 +167,7 @@ exitWhenNotLogged($pdo);
                         </select>
                     </div>
                 </div>
-                <button class="btn btn-primary my-2">Cadastrar</button>
+                <button class="btn btn-primary my-2 btn-success">Cadastrar</button>
             </form>
         </main>
     </div>
