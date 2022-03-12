@@ -11,6 +11,7 @@ nav{
     background-color: #3f3f3f;
     z-index: 1;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    align-items: center;
 }
 
 nav > ul{
@@ -25,6 +26,8 @@ nav li{
     margin-left: 55px;
     margin-right: 55px;
     font-weight: bold;
+    text-align: center;
+
 
 }
 nav li >a:hover{
