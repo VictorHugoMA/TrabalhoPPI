@@ -24,7 +24,7 @@ exitWhenNotLogged($pdo);
 
 <body>
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top  ">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top  ">
             <a class="nav-link active col-1" href="../index.html">
                 <img src="../../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" height="80">
             </a>

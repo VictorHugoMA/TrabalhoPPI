@@ -23,30 +23,38 @@ exitWhenNotLogged($pdo);
 <body>
     <div class="container">
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top  ">
-        <a class="nav-link active col-1" href="../index.html">
-            <img src="../../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" height="80">
-        </a>
-        <button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+            <a class="nav-link active col-1" href="../index.html">
+                <img src="../../images/sanctum.png" alt="CLINICA SANCTUM SANCTORUM" height="80">
+            </a>
+            <button class="navbar-toggler " type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active"><a class="nav-link color-white" href="homeUsuario.php">Home Usuário</a></li>
-                <li class="nav-item"><a class="nav-link color-white" href="formCadastroFuncionario.php">Cadastro de Funcionário</a>
-                </li>
-                <li class="nav-item"><a class="nav-link color-white" href="formCadastroPaciente.php">Cadastro de Paciente</a></li>
-                <li class="nav-item"><a class="nav-link color-white" href="dados/mostraDadosFuncionario.php">Listar Funcionários</a>
-                </li>
-                <li class="nav-item"><a class="nav-link color-white" href="dados/mostraDadosPaciente.php">Listar Pacientes</a></li>
-                <li class="nav-item"><a class="nav-link color-white" href="dados/mostraDadosEndereco.php">Listar Endereços</a></li>
-                <li class="nav-item"><a class="nav-link color-white" href="dados/mostraDadosConsulta.php">Listar Agendamentos</a>
-                </li>
-                <li class="nav-item"><a class="nav-link logout-b" href="../../Back-End/logout.php">Logout</a></li>
-            </ul>
-        </div>
-    </nav>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link color-white" href="homeUsuario.php">Home Usuário</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link color-white" href="formCadastroFuncionario.php">Cadastro de
+                            Funcionário</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link color-white" href="formCadastroPaciente.php">Cadastro de
+                            Paciente</a></li>
+                    <li class="nav-item"><a class="nav-link color-white" href="dados/mostraDadosFuncionario.php">Listar
+                            Funcionários</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link color-white" href="dados/mostraDadosPaciente.php">Listar
+                            Pacientes</a></li>
+                    <li class="nav-item"><a class="nav-link color-white" href="dados/mostraDadosEndereco.php">Listar
+                            Endereços</a></li>
+                    <li class="nav-item"><a class="nav-link color-white" href="dados/mostraDadosConsulta.php">Listar
+                            Agendamentos</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link logout-b" href="../../Back-End/logout.php">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
         <main>
             <div class="container">
                 <h3>Cadastrar novo Funcionário</h3>
