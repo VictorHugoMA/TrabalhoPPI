@@ -2,7 +2,7 @@ CREATE TABLE agenda_Trab
 (
    codigo int PRIMARY KEY auto_increment,
    dataAgenda date,
-   horario datetime,
+   horario int,
    nome varchar(50),
    sexo varchar(50),
    email varchar(50),
