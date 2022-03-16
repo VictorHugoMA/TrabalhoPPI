@@ -61,6 +61,13 @@ try {
           <li class="nav-item"><a class="nav-link color-white" href="mostraDadosConsulta.php">Listar
               Agendamentos</a>
           </li>
+            <?php
+              if ($_SESSION['medico'] != -1)
+                  echo <<<HTML
+                          <li class="nav-item"><a class="nav-link color-white" href="mostrarMeusAgendamentos.php">Listar Meus Agendamentos</a>
+                          </li>
+                          HTML;
+            ?>
           <li class="nav-item"><a class="nav-link logout-b" href="../../../Back-End/logout.php">Logout</a></li>
         </ul>
       </div>
