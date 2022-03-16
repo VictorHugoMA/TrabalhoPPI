@@ -13,6 +13,8 @@ $sql = <<<SQL
     SQL;
 
 try {
+    $horariosMarcados = [];
+    $disponiveis = [];
     $stmt = $pdo->prepare($sql);
     $stmt->execute([$dataAgenda, $codigo]);
 

@@ -9,11 +9,13 @@ exitWhenNotLogged($pdo);
 
 try {
   $sql = <<<SQL
-        SELECT dataAgenda, horario, a.nome as nomePaciente, a.sexo, a.email, p.nome as nomeMedico
-        FROM agenda_Trab a LEFT JOIN pessoa_Trab p ON a.codigo_medico = p.codigo
+        SELECT dataAgenda, horario, nome as nomePaciente, sexo, email
+        FROM agenda_Trab
+        WHERE codigo_medico = ?
         SQL;
 
-  $stmt = $pdo->query($sql);
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute([$_SESSION['medico']]);
 } catch (Exception $e) {
   exit('Ocorreu uma falha: ' . $e->getMessage());
 }
@@ -26,7 +28,7 @@ try {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Agenda</title>
+  <title>Minha Agenda</title>
   <link rel="stylesheet" href="../../../style/style_restrita.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-CuOF+2SnTUfTwSZjCXf01h7uYhfOBuxIhGKPbfEJ3+FqH/s6cIFN9bGr1HmAg4fQ" crossorigin="anonymous">
 
@@ -62,20 +64,20 @@ try {
           <li class="nav-item"><a class="nav-link color-white" href="mostraDadosConsulta.php">Listar
               Agendamentos</a>
           </li>
-          <?php
-            if ($_SESSION['medico'] != -1)
-                echo <<<HTML
-                        <li class="nav-item"><a class="nav-link color-white" href="mostrarMeusAgendamentos.php">Listar Meus Agendamentos</a>
-                        </li>
-                        HTML;
-          ?>
+            <?php
+                if ($_SESSION['medico'] != -1)
+                    echo <<<HTML
+                            <li class="nav-item"><a class="nav-link color-white" href="mostrarMeusAgendamentos.php">Listar Meus Agendamentos</a>
+                            </li>
+                            HTML;
+            ?>
           <li class="nav-item"><a class="nav-link logout-b" href="../../../Back-End/logout.php">Logout</a></li>
         </ul>
       </div>
     </nav>
     <main>
 
-      <h3>Consultas Cadastradas</h3>
+      <h3>Minhas Consultas Agendadas</h3>
       <table class="table table-striped table-hover">
         <tr>
           <th>Data</th>
@@ -83,7 +85,6 @@ try {
           <th>Nome Paciete</th>
           <th>Sexo Paciente</th>
           <th>Email Paciente</th>
-          <th>Nome Médico</th>
         </tr>
         <?php
         while ($row = $stmt->fetch()) {
@@ -93,7 +94,6 @@ try {
           $nomePaciente = htmlspecialchars($row['nomePaciente']);
           $sexoPaciente = htmlspecialchars($row['sexo']);
           $emailPaciente = htmlspecialchars($row['email']);
-          $nomeMedico = htmlspecialchars($row['nomeMedico']);
 
           echo <<<HTML
           <tr>
@@ -102,7 +102,6 @@ try {
             <td>$nomePaciente</td>
             <td>$sexoPaciente</td>
             <td>$emailPaciente</td>
-            <td>$nomeMedico</td>
           </tr>      
         HTML;
         }
