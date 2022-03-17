@@ -20,6 +20,13 @@ exitWhenNotLogged($pdo);
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <style>
+        main  h1{
+            text-align: center;
+            padding-bottom: 1vw;
+            padding-top: 10px;
+        }
+    </style>
 </head>
 
 <body>
@@ -65,13 +72,28 @@ exitWhenNotLogged($pdo);
             </div>
         </nav>
         <main>
-            <h2>Login efetudado</h2>
-            <p>Bem vindo ao site, esta é sua area de usuario sit amet consectetur adipisicing elit. Quos qui debitis ab
-                reiciendis eos, a quisquam natus quam recusandae rem voluptatem, ad fugiat. Alias voluptatibus cum fuga
-                labore, odio autem.</p>
-            <p>Com essas opções ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis iusto voluptates,
-                expedita rerum voluptate nam harum veniam debitis odio ex quo recusandae ullam doloremque reiciendis.
-                Cupiditate rerum sint nemo enim</p>
+          <div>
+          <h1>Bem vindo</h1>
+            <h3>Área restrita para funcionários</h3>
+            <p>Esta é a área onde os funcionários pussuem acesso a partes restritas do site como cadastrar novos funcionarios e pacientes, além da vizualização de diversas informações como
+              consultas agendadas, endereços cadastrados e as informações dos colaboradores. Então, funcionarios, não compartilhem suas senhas.
+            </p>
+            <h3>Informações</h3>
+            <h5>Benefícios para os colaboradores</h5>
+            <ul>
+              <li><strong>Saúde:</strong> A Sanctum possui descontos especiais para funcionários, com isso queremos ajudar os colaboradores a economizar com problemas de saúde, 
+              prevenir futuras doenças, além de impactar positivamente na sua disposição no trabalho e evitar faltas.</li>
+              <li><strong>Bem-Estar:</strong> A Sanctum oferece uma folga remunerada a cada seis meses para auxiliar no seu bem-estar. Confira a agenda das folgas no seu departamento e aproveite</li>
+              <li><strong>Planos de aposentadoria:</strong> Nós oferecemos a profissionais sêniores outras opções de aposentadoria, o que ajuda a reter os talentos com mais
+              experiência, facilitando com o que o conhecimento adquirido seja passado adiante.</li>
+            </ul>
+            <h5>Eventos</h5>
+            <ul>
+              <li><strong>Confraternização: </strong>Data: 20/03/2022</li>
+              <li><strong>Planejamento de Metas 2022: </strong>Data: 29/03/2022</li>
+              <li><strong>Workshop Gestão de pessoas: </strong>Data: 15/04/2022</li>
+            </ul>
+            </div>
         </main>
         <!-- Bootstrap CSS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
